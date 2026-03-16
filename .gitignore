@@ -1,0 +1,19 @@
+# Mac System Files
+.DS_Store
+
+# Node.js Orchestrator
+orchestrator/node_modules/
+orchestrator/.env
+
+# Python AI Engine
+ai-engine/venv/
+ai-engine/__pycache__/
+ai-engine/*.pyc
+
+# Flutter Client App
+client_app/build/
+client_app/.dart_tool/
+client_app/.flutter-plugins
+client_app/.flutter-plugins-dependencies
+client_app/.pub-cache/
+client_app/.packages

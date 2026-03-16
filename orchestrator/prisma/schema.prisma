@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Notice the 'url' line is completely gone now!
+datasource db {
+  provider = "postgresql"
+}
+
+// Table 1: Store our App Users
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String   // In a real app, this would be hashed!
+  images    ImageRecord[]
+  createdAt DateTime @default(now())
+}
+
+// Table 2: Store the AI Results
+model ImageRecord {
+  id              Int      @id @default(autoincrement())
+  userId          Int
+  user            User     @relation(fields: [userId], references: [id])
+  detectedObject  String
+  confidence      Float
+  createdAt       DateTime @default(now())
+}
