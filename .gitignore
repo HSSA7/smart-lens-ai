@@ -1,6 +1,9 @@
 # Mac System Files
 .DS_Store
 
+# Claude Code
+.claude/
+
 # Node.js Orchestrator
 orchestrator/node_modules/
 orchestrator/.env
